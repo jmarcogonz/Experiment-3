@@ -1,0 +1,36 @@
+
+#include <iostream>
+
+using namespace std;
+
+int Province = 3;
+const int Week = 7;
+string letter = "A";
+
+int main()
+{
+    int temperature[Week];
+	string province [Province] = {"A","B","C"};
+    cout << "Enter all temperature for a week of Province A, Province B and then Province C. \n\n";
+
+    for (int i = 0; i < Province; ++i)
+    {
+        for(int j = 0; j < Week; ++j)
+        {
+            cout << "Province " << province[i] << ", Day " << j + 1 << " : ";
+            cin >> temperature[j];
+        }
+    }
+
+    cout << "\n\nDisplaying Values:\n";
+
+    for (int i = 0; i < Province; ++i)
+    {
+        for(int j = 0; j < Week; ++j)
+        {
+            cout << "Province " << province[i] << ", Day " << j+1<< " = " << temperature[j] << endl;
+        }
+    }
+
+    return 0;
+}
